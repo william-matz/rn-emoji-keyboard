@@ -164,6 +164,8 @@ export const EmojiCategory = React.memo(
     React.useEffect(() => {
       if (CATEGORIES[activeCategoryIndex] !== title) {
         setMaxIndex(0)
+      } else {
+        setMaxIndex(minimalEmojisAmountToDisplay)
       }
     }, [activeCategoryIndex, title])
 
